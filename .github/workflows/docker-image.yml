@@ -11,5 +11,5 @@ jobs:
      - name: Code checkout
        uses: actions/checkout@v4
      - name: Build Docker image
-       run: docker build -t chandanvgowda/gh-pyapp:$GITHUB_SHA ."
+       run: docker build -t chandanvgowda/pyapp:$GITHUB_SHA ."
 
