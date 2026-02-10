@@ -29,4 +29,10 @@ jobs:
       - name: Update the deployment.yaml with latest docker tag
         run: |
           yq -i '.spec.template.spec.containers[0].image = "chandanvgowda/gha-pyapp:${{ github.sha }}"' ./k8s/deployment.yaml
+      - name: Commit deployment file changes
+        run: |
+          git config user.name "chandanvgowda"
+          git config user.email "chandan06V@gmail.com"
+          git add k8s/deployment.yaml
+          git commit -m "docker tag updated by git hub action"
 
