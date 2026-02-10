@@ -35,4 +35,5 @@ jobs:
           git config user.email "chandan06V@gmail.com"
           git add k8s/deployment.yaml
           git commit -m "docker tag updated by git hub action"
+          git push origin main
 
