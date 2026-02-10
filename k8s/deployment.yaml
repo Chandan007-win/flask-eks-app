@@ -15,14 +15,13 @@ spec:
         app: pyapp
     spec:
       containers:
-      - name: pyapp
-        image: chandanvgowda/gha-pyapp:v1
-        ports:
-        - containerPort: 5000
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 5000
-          initialDelaySeconds: 5
-          periodSeconds: 10
-
+        - name: pyapp
+          image: chandanvgowda/gha-pyapp:e1428841cb7ed6b9bddc4b57683c9004563b9e11
+          ports:
+            - containerPort: 5000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 10
