@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: pyapp
-        image: chandanvgowda/pyapp:v1
+        image: chandanvgowda/gha-pyapp:v1
         ports:
         - containerPort: 5000
         readinessProbe:
