@@ -1,15 +1,18 @@
 name: Kubernetes CI
+
 on:
- push:
-  branches:
-    - main
+  push:
+    branches:
+      - main
 
 jobs:
   pyapp-ci:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Code checkout
-       uses: actions/checkout@v4
-     - name: Build Docker image
-       run: docker build -t chandanvgowda/pyapp:$GITHUB_SHA ."
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t chandanvgowda/gha-pyapp:${{ github.sha }} .
+
 
